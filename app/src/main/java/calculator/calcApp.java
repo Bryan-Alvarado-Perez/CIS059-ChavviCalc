@@ -10,23 +10,34 @@ public class calcApp {
         private float num2;
         private float result;
 
-        public Calculator(float num1, float num2, float result) {
-            this.num1 = 0;
-            this.num2 = 0;
+        public Calculator(float num1, float num2) {
+            this.num1 = num1;
+            this.num2 = num2;
             this.result = 0;
         }
 
-
         public float add() {
-            return this.result = this.num1 + this.num2;
+            result = num1 + num2;
+            return result;
         }
     }
+    
+        public class Menu {
+            
+            public static void displayMenu() {
+                System.out.println("Test");
+            }
+
+            public static String getUserInput(Scanner input) {
+                return input.nextLine();
+            }
+        }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String userInput = "";
 
-        while (userInput != "q") {
+        while (!userInput.equals("q")) {
             Menu.displayMenu();
             userInput = Menu.getUserInput(input);
         }
