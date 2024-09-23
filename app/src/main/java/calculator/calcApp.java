@@ -5,7 +5,6 @@ public class calcApp {
     
     public class Calculator {
 
-        private StringBuilder userInput = new StringBuilder();
         private float num1;
         private float num2;
         private float result;
@@ -25,7 +24,18 @@ public class calcApp {
         public class Menu {
             
             public static void displayMenu() {
-                System.out.println("Test");
+                System.out.println("===============================");
+                System.out.println("|======CHAVVI-CALCULATOR======|");
+                System.out.println("|=============================|");
+                System.out.println("|===[1]-GET-FIRST-NUMBER======|");
+                System.out.println("|===[2]-GET-SECOND-NUMBER=====|");
+                System.out.println("|===[Q]-QUIT-THE-CALCULATOR===|");
+                System.out.println("|===[A]-ADD===================|");
+                System.out.println("|===[M]-MULTIPLY==============|");
+                System.out.println("|===[S]-SUBTRACT==============|");
+                System.out.println("|===[D]-DIVIDE================|");
+                System.out.println("|===[C]-CLEAR-VALUES==========|");
+                System.out.println("===============================");
             }
 
             public static String getUserInput(Scanner input) {
