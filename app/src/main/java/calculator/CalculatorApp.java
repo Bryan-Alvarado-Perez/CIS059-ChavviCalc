@@ -47,76 +47,76 @@ public class CalculatorApp {
 
   public static void handleCases(String userInput, Scanner input) {
     switch(userInput) {
-case "1":
-System.out.println("Enter the first number: ");
-calculator.setNum1(input.nextFloat());
-input.nextLine();
-break;
+  case "1":
+    System.out.println("Enter the first number: ");
+    calculator.setNum1(input.nextFloat());
+    input.nextLine();
+    break;
 
-case "2":
-System.out.println("Enter the second number: ");
-calculator.setNum2(input.nextFloat());
-input.nextLine();
-break;
+  case "2":
+    System.out.println("Enter the second number: ");
+    calculator.setNum2(input.nextFloat());
+    input.nextLine();
+  break;
 
-case "a":
-calculator.add();
-break;
+  case "a":
+    calculator.add();
+  break;
                     
-case "s":
-calculator.subtract();
-break;
+  case "s":
+    calculator.subtract();
+  break;
                     
-case "m":
-calculator.multiply();
-break;
+  case "m":
+    calculator.multiply();
+  break;
 
-case "d":
-calculator.divide();
-break;
+  case "d":
+    calculator.divide();
+  break;
 
-case "c":
-calculator.clearValues();
-break;
+  case "c":
+   calculator.clearValues();
+  break;
 
-case "q":
-System.out.println("You have quit the calculator");
-break;
+  case "q":
+    System.out.println("You have quit the calculator");
+  break;
 
-default:
-System.out.println("That is an invalid option.");
-break;
-}
+  default:
+    System.out.println("That is an invalid option.");
+  break;
+ }
 }
             
-public static String getUserInput(Scanner input) {
-return input.nextLine();
+  public static String getUserInput(Scanner input) {
+  return input.nextLine();
 }
 
-public static void displayMenu() {
-System.out.println("===============================");
-System.out.println("|======CHAVVI-CALCULATOR======|");
-System.out.println("|=============================|");
-System.out.println("|===[1]-GET-FIRST-NUMBER======|");
-System.out.println("|===[2]-GET-SECOND-NUMBER=====|");
-System.out.println("|===[Q]-QUIT-THE-CALCULATOR===|");
-System.out.println("|===[A]-ADD===================|");
-System.out.println("|===[M]-MULTIPLY==============|");
-System.out.println("|===[S]-SUBTRACT==============|");
-System.out.println("|===[D]-DIVIDE================|");
-System.out.println("|===[C]-CLEAR-VALUES==========|");
-System.out.println("===============================");
+  public static void displayMenu() {
+    System.out.println("===============================");
+    System.out.println("|======CHAVVI-CALCULATOR======|");
+    System.out.println("|=============================|");
+    System.out.println("|===[1]-GET-FIRST-NUMBER======|");
+    System.out.println("|===[2]-GET-SECOND-NUMBER=====|");
+    System.out.println("|===[Q]-QUIT-THE-CALCULATOR===|");
+    System.out.println("|===[A]-ADD===================|");
+    System.out.println("|===[M]-MULTIPLY==============|");
+    System.out.println("|===[S]-SUBTRACT==============|");
+    System.out.println("|===[D]-DIVIDE================|");
+    System.out.println("|===[C]-CLEAR-VALUES==========|");
+    System.out.println("===============================");
+  }
 }
-}
-public static void main(String[] args) {
-Scanner input = new Scanner(System.in);
-String userInput = "";
-while (!userInput.equals("q")) {
-Menu.displayMenu();
-userInput = Menu.getUserInput(input);
-userInput = userInput.toLowerCase();
-Menu.handleCases(userInput, input);
-}
-input.close();
-}
+  public static void main(String[] args) {
+  Scanner input = new Scanner(System.in);
+  String userInput = "";
+  while (!userInput.equals("q")) {
+    Menu.displayMenu();
+    userInput = Menu.getUserInput(input);
+    userInput = userInput.toLowerCase();
+    Menu.handleCases(userInput, input);
+  }
+  input.close();
+  }
 }
